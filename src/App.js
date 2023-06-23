@@ -12,7 +12,11 @@ const App = () => {
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    const fetchEmployees = async () => {
+    fetchEmployees();
+    setSearchQuery("");
+  }, [currentPage]);
+
+  const fetchEmployees = async () => {
     try {
       const response = await axios.get(
         `https://reqres.in/api/users?page=${currentPage}`
@@ -24,10 +28,7 @@ const App = () => {
       console.error("Error fetching employees:", error);
     }
   };
-    fetchEmployees();
-    setSearchQuery("");
-  }, [currentPage]);
-
+  
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
