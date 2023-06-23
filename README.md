@@ -36,6 +36,11 @@ Tailwind CSS offers a wide range of responsive utility classes that you can appl
 ![Screenshot 2023-06-23 174659](https://github.com/riyav5363/Employee-Directory/assets/136462279/55287d02-309e-4ac5-9a06-0c8c87a2d85d)
 ![Screenshot 2023-06-23 174757](https://github.com/riyav5363/Employee-Directory/assets/136462279/b4b21cac-e8e7-4ac9-8e16-b573045efeaf)
 ![Screenshot 2023-06-23 174829](https://github.com/riyav5363/Employee-Directory/assets/136462279/0005bff2-3f8f-4cda-ac69-c38fcd41d74b)
-![WhatsApp Image 2023-06-23 at 5 44 27 PM](https://github.com/riyav5363/Employee-Directory/assets/136462279/c7fa3787-e9ea-45f6-a3be-00acd3b21dd4 | width=100 height=60)
-![WhatsApp Image 2023-06-23 at 5 42 23 PM (1)](https://github.com/riyav5363/Employee-Directory/assets/136462279/e8cb7131-85ff-4f77-9936-e7179925df5f | width=100 height=60)
-![WhatsApp Image 2023-06-23 at 5 42 23 PM](https://github.com/riyav5363/Employee-Directory/assets/136462279/f4660c1c-6d29-42a4-bd7d-9dc1fb780975 | width=100 height=60)
+![WhatsApp Image 2023-06-23 at 5 44 27 PM](https://github.com/riyav5363/Employee-Directory/assets/136462279/c7fa3787-e9ea-45f6-a3be-00acd3b21dd4) <!-- src = link#thumbnail -->
+![WhatsApp Image 2023-06-23 at 5 42 23 PM (1)](https://github.com/riyav5363/Employee-Directory/assets/136462279/e8cb7131-85ff-4f77-9936-e7179925df5f) <!-- src = link#thumbnail -->
+![WhatsApp Image 2023-06-23 at 5 42 23 PM](https://github.com/riyav5363/Employee-Directory/assets/136462279/f4660c1c-6d29-42a4-bd7d-9dc1fb780975) <!-- src = link#thumbnail -->
+
+img[src*="#thumbnail"] {
+   width:150px;
+   height:100px;
+}
