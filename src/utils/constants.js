@@ -1,0 +1,1 @@
+export const EMPLOYEE_NOT_FOUND = "Sorry, we didn't find any Employee!"
