@@ -1,5 +1,3 @@
-![Screenshot 2023-06-23 174659](https://github.com/riyav5363/Employee-Directory/assets/136462279/761ba1ed-4df8-441d-9e5d-c095e7edb9ae)
-![Uploading Screenshot 2023-06-23 174528.png…]()
 # Employee Directory
 
 This project basically keeps the list of all the employees and has a search functionality using which we search any employee by its name . I have also added pagination in order to view all the pages available in the dataset
@@ -13,11 +11,10 @@ Axios is a popular JavaScript library used for making HTTP requests from the bro
 ### API used - `https://reqres.in/api/users?page=1`
 
 ## Steps to run the code
-
-### First you will clone the project in your local computer
-### Run `npm install` to download all the dependencies
-### Run `npm start` to start the project
-### Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- First you will clone the project in your local computer
+- Run `npm install` to download all the dependencies
+- Run `npm start` to start the project
+- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### Responsive Breakpoints:
 Tailwind CSS provides a set of predefined breakpoints that correspond to different screen sizes. You can use these breakpoints to define different styles for various screen sizes. By default, these breakpoints are:
@@ -37,4 +34,3 @@ Tailwind CSS offers a wide range of responsive utility classes that you can appl
 ![Uploading Screenshot 2023-06-23 174452.png…]()
 ![Uploading Screenshot 2023-06-23 174829.png…]()
 ![Screenshot 2023-06-23 174757](https://github.com/riyav5363/Employee-Directory/assets/136462279/b480bae7-e1eb-4bf0-8cd6-9354898c907f)
-
