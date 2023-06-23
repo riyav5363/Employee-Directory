@@ -2,7 +2,7 @@
 
 This project basically keeps the list of all the employees and has a search functionality using which we search any employee by its name . I have also added pagination in order to view all the pages available in the dataset
 
-## Deployed Site on Netlify 
+### Deployed Site on Netlify 
 [https://employee-directory-riya.netlify.app/](https://employee-directory-riya.netlify.app/)
 
 ### Tailwind CSS - 
