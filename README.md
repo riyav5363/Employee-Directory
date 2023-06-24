@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Employee Directory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project basically keeps the list of all the employees and has a search functionality using which we search any employee by its name . I have also added pagination in order to view all the pages available in the dataset. I have used react for the overall structure and tailwind css to provide styling to it
 
-## Available Scripts
+### Deployed Site on Netlify 
+[https://employee-directory-riya.netlify.app/](https://employee-directory-riya.netlify.app/)
 
-In the project directory, you can run:
+### Tailwind CSS - 
+Tailwind CSS is a utility-first CSS framework that provides a set of pre-defined utility classes to style your web application. It focuses on providing a low-level utility approach, allowing you to easily compose and customize your styles. With Tailwind CSS, you can rapidly build user interfaces by applying classes directly in your HTML markup, rather than writing custom CSS.
 
-### `npm start`
+### Axios -
+Axios is a popular JavaScript library used for making HTTP requests from the browser or Node.js. It provides a simple and intuitive API for performing asynchronous HTTP requests, including GET, POST, PUT, DELETE, and more. Axios supports Promise-based responses, allowing you to use async/await or promise chaining syntax for handling request and response data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### API used - `https://reqres.in/api/users`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Steps to run the code
+- First you will clone the project in your local computer
+- Run `npm install` to download all the dependencies
+- Run `npm start` to start the project
+- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm test`
+### Responsive Breakpoints:
+Tailwind CSS provides a set of predefined breakpoints that correspond to different screen sizes. You can use these breakpoints to define different styles for various screen sizes. By default, these breakpoints are:
+- sm: Small screens (up to 640px)
+- md: Medium screens (up to 768px)
+- lg: Large screens (up to 1024px)
+- xl: Extra-large screens (up to 1280px)
+- 2xl: Extra-extra-large screens (up to 1536px)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Responsive Utility Classes:
+Tailwind CSS offers a wide range of responsive utility classes that you can apply to elements to control their appearance and behavior at different breakpoints.By using these responsive utility classes, you can easily adjust the styling of your elements based on the screen size. To make an element responsive, you can add responsive classes as prefixes to existing utility classes. For example:
+- text-sm: Applies a smaller font size to the element on all screen sizes.
+- md:text-lg: Applies a larger font size to the element on medium screens and larger.
+- lg:w-1/2: Makes the element take up 50% of the width on large screens and larger.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshots to demonstrate the responsiveness of the website
+![Screenshot 2023-06-23 174452](https://github.com/riyav5363/Employee-Directory/assets/136462279/1a776791-676e-4e4a-b99e-430527df402b)
+![Screenshot 2023-06-23 174528](https://github.com/riyav5363/Employee-Directory/assets/136462279/e2ba4f63-8890-485f-8403-b6618654ef8e)
+![Screenshot 2023-06-23 174659](https://github.com/riyav5363/Employee-Directory/assets/136462279/55287d02-309e-4ac5-9a06-0c8c87a2d85d)
+![Screenshot 2023-06-23 174757](https://github.com/riyav5363/Employee-Directory/assets/136462279/b4b21cac-e8e7-4ac9-8e16-b573045efeaf)
+![Screenshot 2023-06-23 174829](https://github.com/riyav5363/Employee-Directory/assets/136462279/0005bff2-3f8f-4cda-ac69-c38fcd41d74b)
+![WhatsApp Image 2023-06-23 at 5 44 27 PM](https://github.com/riyav5363/Employee-Directory/assets/136462279/c7fa3787-e9ea-45f6-a3be-00acd3b21dd4) 
+![WhatsApp Image 2023-06-23 at 5 42 23 PM (1)](https://github.com/riyav5363/Employee-Directory/assets/136462279/e8cb7131-85ff-4f77-9936-e7179925df5f)
+![WhatsApp Image 2023-06-23 at 5 42 23 PM](https://github.com/riyav5363/Employee-Directory/assets/136462279/f4660c1c-6d29-42a4-bd7d-9dc1fb780975)
