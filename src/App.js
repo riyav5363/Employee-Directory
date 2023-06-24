@@ -19,7 +19,7 @@ const App = () => {
       setError(null);
       try {
         const response = await axios.get(
-          `https://reqresss.in/api/users?page=${currentPage}`
+          `https://reqres.in/api/users?page=${currentPage}`
         );
         const { total_pages, data } = response.data;
         setEmployees(data);
