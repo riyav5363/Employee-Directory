@@ -3,7 +3,7 @@
 This project basically keeps the list of all the employees and has a search functionality using which we search any employee by its name . I have also added pagination in order to view all the pages available in the dataset. I have used react for the overall structure and tailwind css to provide styling to it
 
 ### Deployed Site on Netlify 
-[https://employee-directory-riya.netlify.app/](https://employee-directory-riya.netlify.app/)
+[https://employee-directory-riya-vishwakarma.netlify.app/](https://employee-directory-riya-vishwakarma.netlify.app/)
 
 ### Tailwind CSS - 
 Tailwind CSS is a utility-first CSS framework that provides a set of pre-defined utility classes to style your web application. It focuses on providing a low-level utility approach, allowing you to easily compose and customize your styles. With Tailwind CSS, you can rapidly build user interfaces by applying classes directly in your HTML markup, rather than writing custom CSS.
