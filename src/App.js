@@ -3,7 +3,7 @@ import axios from "axios";
 import EmployeeList from "./components/EmployeeList";
 import Search from "./components/Search";
 import Pagination from "./components/Pagination";
-import { EMPLOYEE_NOT_FOUND} from "./utils/constants";
+import { EMPLOYEE_NOT_FOUND } from "./utils/constants";
 import "./App.css";
 
 const App = () => {
@@ -16,18 +16,19 @@ const App = () => {
 
   useEffect(() => {
     const fetchEmployees = async () => {
+      setError(null);
       try {
         const response = await axios.get(
-          `https://reqres.in/api/users?page=${currentPage}`
+          `https://reqresss.in/api/users?page=${currentPage}`
         );
         const { total_pages, data } = response.data;
         setEmployees(data);
         setLoading(false);
         setTotalPages(total_pages);
-      } catch (error) {
+      } catch (err) {
         setEmployees([]);
         setLoading(false);
-        setError(`${EMPLOYEE_NOT_FOUND}`);
+        setError(err.message);
       }
     };
     fetchEmployees();
@@ -63,12 +64,21 @@ const App = () => {
         <>
           {error ? (
             <div className="flex justify-around">
-              <p className="text-xl text-red-500 font-bold mb-5">
-                {EMPLOYEE_NOT_FOUND}
-              </p>
-            </div>
+            <p className="text-xl text-red-500 font-bold mb-5">
+              {error}
+            </p>
+          </div>
           ) : (
-            <EmployeeList filteredEmployees={filteredEmployees} />
+            
+              filteredEmployees.length === 0 ? (
+              <div className="flex justify-around">
+                <p className="text-xl text-red-500 font-bold mb-5">
+                  {EMPLOYEE_NOT_FOUND}
+                </p>
+              </div>
+              ) : (
+              <EmployeeList filteredEmployees={filteredEmployees} />)
+            
           )}
         </>
       )}
