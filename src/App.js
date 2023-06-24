@@ -3,31 +3,36 @@ import axios from "axios";
 import EmployeeList from "./components/EmployeeList";
 import Search from "./components/Search";
 import Pagination from "./components/Pagination";
-import { EMPLOYEE_NOT_FOUND } from "./utils/constants";
+import { EMPLOYEE_NOT_FOUND} from "./utils/constants";
+import "./App.css";
 
 const App = () => {
   const [employees, setEmployees] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
+    const fetchEmployees = async () => {
+      try {
+        const response = await axios.get(
+          `https://reqres.in/api/users?page=${currentPage}`
+        );
+        const { total_pages, data } = response.data;
+        setEmployees(data);
+        setLoading(false);
+        setTotalPages(total_pages);
+      } catch (error) {
+        setEmployees([]);
+        setLoading(false);
+        setError(`${EMPLOYEE_NOT_FOUND}`);
+      }
+    };
     fetchEmployees();
     setSearchQuery("");
   }, [currentPage]);
-
-  const fetchEmployees = async () => {
-    try {
-      const response = await axios.get(
-        `https://reqres.in/api/users?page=${currentPage}`
-      );
-      const { total_pages, data } = response.data;
-      setEmployees(data);
-      setTotalPages(total_pages);
-    } catch (error) {
-      console.error("Error fetching employees:", error);
-    }
-  };
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
@@ -50,14 +55,22 @@ const App = () => {
           handleSearchChange={handleSearchChange}
         />
       </div>
-      {filteredEmployees.length === 0 ? (
+      {loading ? (
         <div className="flex justify-around">
-          <p className="text-xl text-red-500 font-bold mb-5">
-            {EMPLOYEE_NOT_FOUND}
-          </p>
+          <div className="loader"></div>
         </div>
       ) : (
-        <EmployeeList filteredEmployees={filteredEmployees} />
+        <>
+          {error ? (
+            <div className="flex justify-around">
+              <p className="text-xl text-red-500 font-bold mb-5">
+                {EMPLOYEE_NOT_FOUND}
+              </p>
+            </div>
+          ) : (
+            <EmployeeList filteredEmployees={filteredEmployees} />
+          )}
+        </>
       )}
       <Pagination
         currentPage={currentPage}
